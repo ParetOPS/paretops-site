@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParetOPS - Empowering Manufacturing Efficiency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #07182f url('better_background.jpg') center/cover no-repeat;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(rgba(7, 24, 47, 0.5), rgba(7, 24, 47, 0.5));
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #cfd9e0;
+    }
+
+    .buttons button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .demo-btn {
+      background-color: #4da6ff;
+      color: white;
+    }
+
+    .contact-btn {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+    }
+
+    .features, .use-case, footer {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(7, 24, 47, 0.9);
+    }
+
+    .features h3, .use-case h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 2rem;
+      width: 280px;
+      text-align: left;
+    }
+
+    .card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #cfd9e0;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="/paretops-modified.png" alt="ParetOPS Logo">
+    </div>
+    <nav>
+      <a onclick="scrollToSection('hero')">Home</a>
+      <a onclick="scrollToSection('features')">Features</a>
+      <a onclick="scrollToSection('use-case')">Use Cases</a>
+      <a onclick="alert('Email us at: contact@paretops.com')">Contact</a>
+      <a href="#" style="font-weight: 600; background: #334155; padding: 0.4rem 0.8rem; border-radius: 5px;">Client Portal</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h2>Empowering Data-Driven Efficiency in Manufacturing</h2>
+    <p>ParetOPS helps your team make smarter decisions, reduce downtime, and boost productivity — all in real time.</p>
+    <div class="buttons">
+      <button class="demo-btn" onclick="alert('Demo video is coming soon!')">Watch Demo</button>
+      <button class="contact-btn" onclick="alert('Email us at: contact@paretops.com')">Contact Us</button>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h3>Why ParetOPS?</h3>
+    <div class="feature-cards">
+      <div class="card">
+        <h4>Real-Time Monitoring</h4>
+        <p>Track key KPIs like OEE, downtime, and output directly from your shop floor.</p>
+      </div>
+      <div class="card">
+        <h4>Smart Reports</h4>
+        <p>Get automatically generated insights to prioritize actions and improve continuously.</p>
+      </div>
+      <div class="card">
+        <h4>Lean Integration</h4>
+        <p>Built with Lean Six Sigma principles — DMAIC-ready, operator-friendly, and scalable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="use-case" id="use-case">
+    <h3>Built for Performance-Driven Teams</h3>
+    <p>
+      • Used by leading aerospace manufacturers to track ply cutter efficiency.<br>
+      • Improved weekly output by 22% through better floater response and downtime control.<br>
+      • Customized dashboard for operators, team leaders, and engineers.
+    </p>
+    <p style="margin-top: 2rem; font-style: italic; color: #ccc;">
+      “With ParetOPS, we finally turned our production data into actionable results. It’s simple, accurate, and powerful.”<br>
+      — Manufacturing Engineer, CFAN
+    </p>
+  </section>
+
+  <footer>
+    © 2025 ParetOPS – All rights reserved | Privacy | Terms | paretops.com
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
