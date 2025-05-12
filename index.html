@@ -14,9 +14,12 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #07182f url('better_background.jpg') center/cover no-repeat;
+      background-image: url('better_background.jpg');
       color: #fff;
       padding-top: 0px;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
     }
 
     header {
@@ -59,7 +62,7 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      background: linear-gradient(rgba(7, 24, 47, 0.5), rgba(7, 24, 47, 0.5));
+      /*background: linear-gradient(rgba(7, 24, 47, 0.5), rgba(7, 24, 47, 0.5));*/
     }
 
     .hero h2 {
@@ -83,10 +86,13 @@
       border-radius: 4px;
     }
 
-    .demo-btn {
-      background-color: #4da6ff;
-      color: white;
+    .demo-btn:hover {
+      background-color: #1c86e3; /* un bleu un peu plus foncé */
+      box-shadow: 0 0 10px #4da6ff80; /* effet lumineux */
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
     }
+
 
     .contact-btn {
       background-color: transparent;
@@ -224,18 +230,29 @@
       <a onclick="scrollToSection('hero')">Home</a>
       <a onclick="scrollToSection('feature-highlights')">Features</a>
       <a onclick="scrollToSection('use-case')">Use Cases</a>
-      <a onclick="scrollToSection('contact')">Contact</a>
-      <a href="#" style="font-weight: 600; background: #334155; padding: 0.4rem 0.8rem; border-radius: 5px;">Client Portal</a>
+      <a onclick="scrollToSection('plugins')">Plug-ins</a>
+      <a onclick="scrollToSection('contact')" style="font-weight: 600; background: #334155; padding: 0.4rem 0.8rem; border-radius: 5px;">Contact Us</a>
     </nav>
   </header>
 
   <section class="hero" id="hero">
     <h2>Empowering Data-Driven Efficiency in Manufacturing</h2>
     <p>ParetOPS helps your team make smarter decisions, reduce downtime, and boost productivity — all in real time.</p>
+
     <div class="buttons">
       <button class="demo-btn" onclick="scrollToSection('feature-highlights')">Features</button>
-      <button class="contact-btn" onclick="alert('Email us at: contact@paretops.com')">Contact Us</button>
+      <button class="contact-btn" onclick="scrollToSection('contact')">Contact Us</button>
     </div>
+    
+    <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; background-color: rgba(0,0,0,0.25); padding: 1.5rem 2rem; border-radius: 8px;">
+      <p style="font-size: 1.05rem; line-height: 1.6; color: #cfd9e0; text-align: center;">
+        <strong>ParetOPS is an all-in-one production and maintenance intelligence platform.</strong><br><br>
+        It collects real-time data from the shop floor, analyzes trends across machines and shifts, and guides action through live KPIs and smart benchmarks.<br><br>
+        Unlike Excel or rigid MES systems, ParetOPS delivers instant visibility, team coordination, and data-backed decisions — without the complexity.
+      </p>
+    </div>
+    
+
   </section>
 
   <section class="features" id="features">
@@ -320,7 +337,7 @@
             <p>
               Operators log production or maintenance events in seconds through a simple, intuitive interface—no training needed. 
               The system runs on any standard tablet and requires no complex setup, making deployment effortless and impactful.<br><br>
-              Every input is time-stamped and linked to the operator, ensuring full traceability and reinforcing accountability across the shop floor.
+              Every input is time-stamped and can linked to the operator, ensuring full traceability and reinforcing accountability across the shop floor.
             </p>
           </div>
         </div>
@@ -370,8 +387,17 @@
               <img src="workforce_plugin.png" alt="Workforce Optimizer">
             </div>
             <h4>Workforce Optimizer</h4>
-            <p>Allocate floaters, trainees, and machine specialists dynamically based on real-time needs. Optimize shift coverage with minimal waste.</p>
+            <p>Optimize workforce per machine to find the best balance between output and unit cost, based on real performance data.</p>
           </div>
+
+          <div class="plugin-card">
+            <div class="plugin-image-container">
+              <img src="custom_plugin.png" alt="Custom Requests">
+            </div>
+            <h4>Custom Features on Request</h4>
+            <p>If a needed feature is missing, the ParetOPS team can evaluate and develop it. The platform is modular and adapts to your needs.</p>
+          </div>
+          
       
         </div>
       </section>
@@ -383,14 +409,14 @@
   <section class="use-case" id="use-case">
     <h3>Built for Performance-Driven Teams</h3>
     <p>
-      • Used by leading aerospace manufacturers to track ply cutter efficiency.<br>
-      • Improved weekly output by 22% through better floater response and downtime control.<br>
-      • Customized dashboard for operators, team leaders, and engineers.
+      • Used by leading aerospace manufacturers to increase availbility, utilization and efficiency across their production lines.<br>
+      • Improved production caapcity by 25% avoiding costly investments in new machines.<br>
+      • Aligned daily actions with long-term performand goals through live dashboards and alerts.
     </p>
-    <p style="margin-top: 2rem; font-style: italic; color: #ccc;">
+    <!-- <p style="margin-top: 2rem; font-style: italic; color: #ccc;">
       “With ParetOPS, we finally turned our production data into actionable results. It’s simple, accurate, and powerful.”<br>
-      — Manufacturing Engineer, ...
-    </p>
+    — ..., ...
+    </p> -->
   </section>
 
   <section class="features" id="contact" style="background-color: #0a1b33;">
