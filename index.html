@@ -49,7 +49,6 @@
 
     main {
       flex: 1;
-      padding-top: 80px;
     }
 
 
@@ -326,6 +325,7 @@
   }
 }
 
+
 </style>
 </head>
 <body>
@@ -563,6 +563,20 @@
       }
     }
   </script>
+
+
+<script>
+  function adjustMainPadding() {
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+    if (header && main) {
+      main.style.paddingTop = header.offsetHeight + 'px';
+    }
+  }
+
+  window.addEventListener('load', adjustMainPadding);
+  window.addEventListener('resize', adjustMainPadding);
+</script>
 
 </body>
 </html>
