@@ -12,14 +12,24 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url('better_background.jpg');
+      background-color: #061426; /* Fond bleu foncé uniforme */
       color: #fff;
       padding-top: 0px;
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-size: contain;
     }
 
     header {
@@ -62,7 +72,10 @@
     .hero {
       text-align: center;
       padding: 6rem 2rem;
-      /*background: linear-gradient(rgba(7, 24, 47, 0.5), rgba(7, 24, 47, 0.5));*/
+      background-image: linear-gradient(rgba(7, 24, 47, 0.6), rgba(7, 24, 47, 0.8)), url('better_background.jpg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
     }
 
     .hero h2 {
@@ -101,7 +114,7 @@
     }
 
     .features, .use-case, footer {
-      padding: 4rem 2rem;
+      padding: 2rem 2rem;
       text-align: center;
       background: rgba(7, 24, 47, 0.9);
     }
@@ -215,6 +228,13 @@
     animation: bounce 0.6s ease;
   }
 
+  footer {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: auto;
+  }
+
+
 
 
 
@@ -234,205 +254,215 @@
       <a onclick="scrollToSection('contact')" style="font-weight: 600; background: #334155; padding: 0.4rem 0.8rem; border-radius: 5px;">Contact Us</a>
     </nav>
   </header>
+  <main>
+    <section class="hero" id="hero">
+      <h2>Empowering Data-Driven Efficiency in Manufacturing</h2>
+      <p>ParetOPS helps your team make smarter decisions, reduce downtime, and boost productivity — all in real time.</p>
 
-  <section class="hero" id="hero">
-    <h2>Empowering Data-Driven Efficiency in Manufacturing</h2>
-    <p>ParetOPS helps your team make smarter decisions, reduce downtime, and boost productivity — all in real time.</p>
-
-    <div class="buttons">
-      <button class="demo-btn" onclick="scrollToSection('feature-highlights')">Features</button>
-      <button class="contact-btn" onclick="scrollToSection('contact')">Contact Us</button>
-    </div>
-    
-    <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; background-color: rgba(0,0,0,0.25); padding: 1.5rem 2rem; border-radius: 8px;">
-      <p style="font-size: 1.05rem; line-height: 1.6; color: #cfd9e0; text-align: center;">
-        <strong>ParetOPS is an all-in-one production and maintenance intelligence platform.</strong><br><br>
-        It collects real-time data from the shop floor, analyzes trends across machines and shifts, and guides action through live KPIs and smart benchmarks.<br><br>
-        Unlike Excel or rigid MES systems, ParetOPS delivers instant visibility, team coordination, and data-backed decisions — without the complexity.
-      </p>
-    </div>
-    
-
-  </section>
-
-  <section class="features" id="features">
-    <h3>Why ParetOPS?</h3>
-    <div class="feature-cards">
-      <div class="card">
-        <img src="real_time.png" alt="Real-Time Monitoring Icon" style="height: 120px; margin-bottom: .2rem;">
-        <h4>Real-Time Monitoring</h4>
-        <p>Track key KPIs like OEE, downtime, and output directly from your shop floor.</p>
+      <div class="buttons">
+        <button class="demo-btn" onclick="scrollToSection('feature-highlights')">Features</button>
+        <button class="contact-btn" onclick="scrollToSection('contact')">Contact Us</button>
       </div>
-      <div class="card">
-        <img src="Reports.png" alt="Smart Reports Icon" style="height: 120px; margin-bottom: .2rem;">
-        <h4>Smart Reports</h4>
-        <p>Get automatically generated insights to prioritize actions and improve continuously.</p>
+      
+      <div style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; background-color: rgba(0,0,0,0.25); padding: 1.5rem 2rem; border-radius: 8px;">
+        <p style="font-size: 1.05rem; line-height: 1.6; color: #cfd9e0; text-align: center;">
+          <strong>ParetOPS is an all-in-one production and maintenance intelligence platform.</strong><br><br>
+          It collects real-time data from the shop floor, analyzes trends across machines and shifts, and guides action through live KPIs and smart benchmarks.<br><br>
+          Unlike Excel or rigid MES systems, ParetOPS delivers instant visibility, team coordination, and data-backed decisions — without the complexity.
+        </p>
       </div>
-      <div class="card">
-        <img src="Lean.png" alt="Lean Integration Icon" style="height: 120px; margin-bottom: .2rem;">
-        <h4>Lean Integration</h4>
-        <p>Built with Lean Six Sigma principles — DMAIC-ready, operator-friendly, and scalable.</p>
-      </div>
-    </div>
-  </section>
+      
 
-  <section class="features" id="feature-highlights" style="background-color: #08172d;">
-    <h3 style="margin-bottom: 2rem;">Feature Highlights</h3>
-    <div style="max-width: 1100px; margin: auto; display: flex; flex-direction: column; gap: 3rem;">
-  
-      <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem;">
-          <div style="position: relative; width: 400px; flex-shrink: 0;">
-            <img src="leader.png" alt="Leader Dashboard" style="width: 100%; border-radius: 10px;">
-            <img src="graph.png" alt="Graph Example" class="floating-thumbnail"
-              style="position: absolute; bottom: -40px; left: -130px; width: 220px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
-            <img src="benchmarking.png" alt="Benchmark Example" class="floating-thumbnail"
-              style="position: absolute; bottom: -80px; right: -50px; width: 250px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
-          </div>
+    </section>
 
-
-          <div style="flex: 1; min-width: 250px; margin-left: 2rem;">
-            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Leader Dashboard</h4>
-            <p style="line-height: 1.6;">
-              The Leader Dashboard offers long-term visibility into production and maintenance trends. Powered by the <strong>ParetOPS algorithm</strong>, it highlights emerging patterns and supports data-driven decisions based on real-time updates.<br><br>
-              It helps leaders detect issues early, standardize best practices, and compare machine or shift performance. Clear, exportable reports make it easy to justify investments and demonstrate ROI.
-            </p>
-          </div>
-          
-          
-          
-      </div>
-  
-
-
-      <!-- Section: Daily Operations Dashboard -->
-      <div style="max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;margin-bottom: 4rem;">
-
-        <!-- Texte descriptif -->
-        <div style="flex: 1; min-width: 250px;">
-          <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Live Alerts & Accountability</h4>
-          <p style="line-height: 1.6;">
-            Designed for immediate impact, the Daily Dashboard alerts leaders in real time when support is needed or deviations occur.<br><br>
-            It empowers instant adjustments to targets, priorities, and resource allocation—enhancing accountability and keeping operations fluid.<br><br>
-            <span style="color: #4da6ff; font-weight: 600;">From urgency to mastery—ParetOPS ensures controlled flow.</span>
-          </p>
+    <section class="features" id="features">
+      <h3>Why ParetOPS?</h3>
+      <div class="feature-cards">
+        <div class="card">
+          <img src="real_time.png" alt="Real-Time Monitoring Icon" style="height: 120px; margin-bottom: .2rem;">
+          <h4>Real-Time Monitoring</h4>
+          <p>Track key KPIs like OEE, downtime, and output directly from your shop floor.</p>
         </div>
-
-        <!-- Image principale avec overlays -->
-        <div style="position: relative; width: 400px; flex-shrink: 0;">
-          <img src="daily.png" alt="Daily Dashboard Main" style="width: 100%; border-radius: 10px;">
-          <img src="lowprod.png" alt="Alert Example" class="floating-thumbnail"
-            style="position: absolute; top: -30px; left: -60px; width: 160px; border-radius: 6px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
-          <img src="status.png" alt="Status Example" class="floating-thumbnail"
-            style="position: absolute; bottom: -85px; right: -50px; width: 160px; border-radius: 6px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
+        <div class="card">
+          <img src="Reports.png" alt="Smart Reports Icon" style="height: 120px; margin-bottom: .2rem;">
+          <h4>Smart Reports</h4>
+          <p>Get automatically generated insights to prioritize actions and improve continuously.</p>
         </div>
+        <div class="card">
+          <img src="Lean.png" alt="Lean Integration Icon" style="height: 120px; margin-bottom: .2rem;">
+          <h4>Lean Integration</h4>
+          <p>Built with Lean Six Sigma principles — DMAIC-ready, operator-friendly, and scalable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="feature-highlights" style="background-color: #08172d;">
+      <h3 style="margin-bottom: 2rem;">Feature Highlights</h3>
+      <div style="max-width: 1100px; margin: auto; display: flex; flex-direction: column; gap: 3rem;">
+    
+        <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem;">
+            <div style="position: relative; width: 400px; flex-shrink: 0;">
+              <img src="leader.png" alt="Leader Dashboard" style="width: 100%; border-radius: 10px;">
+              <img src="graph.png" alt="Graph Example" class="floating-thumbnail"
+                style="position: absolute; bottom: -40px; left: -130px; width: 220px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
+              <img src="benchmarking.png" alt="Benchmark Example" class="floating-thumbnail"
+                style="position: absolute; bottom: -80px; right: -50px; width: 250px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
+            </div>
+
+
+            <div style="flex: 1; min-width: 250px; margin-left: 2rem;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Leader Dashboard</h4>
+              <p style="line-height: 1.6;">
+                The Leader Dashboard offers long-term visibility into production and maintenance trends. Powered by the <strong>ParetOPS algorithm</strong>, it highlights emerging patterns and supports data-driven decisions based on real-time updates.<br><br>
+                It helps leaders detect issues early, standardize best practices, and compare machine or shift performance. Clear, exportable reports make it easy to justify investments and demonstrate ROI.
+              </p>
+            </div>
             
-      </div>
-  
-      <div style="max-width: 900px; margin: 0 auto;">
+            
+            
+        </div>
+    
 
-        <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row; margin-bottom: 4rem;">
-          <img src="data_entry.png" alt="Tablet Entry" style="width: 300px; border-radius: 10px; flex-shrink: 0;">
+
+        <!-- Section: Daily Operations Dashboard -->
+        <div style="max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;margin-bottom: 4rem;">
+
+          <!-- Texte descriptif -->
           <div style="flex: 1; min-width: 250px;">
-            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Tablet-Based Input</h4>
-            <p>
-              Operators log production or maintenance events in seconds through a simple, intuitive interface—no training needed. 
-              The system runs on any standard tablet and requires no complex setup, making deployment effortless and impactful.<br><br>
-              Every input is time-stamped and can linked to the operator, ensuring full traceability and reinforcing accountability across the shop floor.
+            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Live Alerts & Accountability</h4>
+            <p style="line-height: 1.6;">
+              Designed for immediate impact, the Daily Dashboard alerts leaders in real time when support is needed or deviations occur.<br><br>
+              It empowers instant adjustments to targets, priorities, and resource allocation—enhancing accountability and keeping operations fluid.<br><br>
+              <span style="color: #4da6ff; font-weight: 600;">From urgency to mastery—ParetOPS ensures controlled flow.</span>
             </p>
           </div>
+
+          <!-- Image principale avec overlays -->
+          <div style="position: relative; width: 400px; flex-shrink: 0;">
+            <img src="daily.png" alt="Daily Dashboard Main" style="width: 100%; border-radius: 10px;">
+            <img src="lowprod.png" alt="Alert Example" class="floating-thumbnail"
+              style="position: absolute; top: -30px; left: -60px; width: 160px; border-radius: 6px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
+            <img src="status.png" alt="Status Example" class="floating-thumbnail"
+              style="position: absolute; bottom: -85px; right: -50px; width: 160px; border-radius: 6px; box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 2;">
+          </div>
+              
+        </div>
+    
+        <div style="max-width: 900px; margin: 0 auto;">
+
+          <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row; margin-bottom: 4rem;">
+            <img src="data_entry.png" alt="Tablet Entry" style="width: 300px; border-radius: 10px; flex-shrink: 0;">
+            <div style="flex: 1; min-width: 250px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Tablet-Based Input</h4>
+              <p>
+                Operators log production or maintenance events in seconds through a simple, intuitive interface—no training needed. 
+                The system runs on any standard tablet and requires no complex setup, making deployment effortless and impactful.<br><br>
+                Every input is time-stamped and can linked to the operator, ensuring full traceability and reinforcing accountability across the shop floor.
+              </p>
+            </div>
+          </div>
+          
         </div>
         
-      </div>
-      
-  
-      <div style="max-width: 900px; margin: 0 auto;">
+    
+        <div style="max-width: 900px; margin: 0 auto;">
 
-        <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row; margin-bottom: 4rem;">
-          <div style="flex: 1; min-width: 250px;">
-            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Real-Time Visuals</h4>
-            <p>
-              Large-screen TVs broadcast live production metrics across the shop floor, helping teams stay focused and aligned. 
-              Operators instantly see goals, progress, and alerts—enhancing reactivity and driving collective performance.<br><br>
-              This shared visibility fosters a stronger team dynamic, where everyone understands priorities and contributes to the same production targets.
-            </p>
+          <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row; margin-bottom: 4rem;">
+            <div style="flex: 1; min-width: 250px;">
+              <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Real-Time Visuals</h4>
+              <p>
+                Large-screen TVs broadcast live production metrics across the shop floor, helping teams stay focused and aligned. 
+                Operators instantly see goals, progress, and alerts—enhancing reactivity and driving collective performance.<br><br>
+                This shared visibility fosters a stronger team dynamic, where everyone understands priorities and contributes to the same production targets.
+              </p>
+            </div>
+            <img src="prod_monitoring.png" alt="Real-Time Visuals" style="width: 350px; border-radius: 10px; flex-shrink: 0;">
           </div>
-          <img src="prod_monitoring.png" alt="Real-Time Visuals" style="width: 350px; border-radius: 10px; flex-shrink: 0;">
+        
         </div>
-      
-      </div>
-      
-      
-      <section class="features" id="plugins" style="background-color: #08172d;">
-        <h3 style="margin-bottom: 2rem; color: white; text-align: center;">Plug-ins Available</h3>
-        <div class="feature-cards" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      
-          <div class="plugin-card">
-            <div class="plugin-image-container">
-              <img src="operator_plugin.png" alt="Operator Productivity">
+        
+        
+        <section class="features" id="plugins" style="background-color: #08172d;">
+          <h3 style="margin-bottom: 2rem; color: white; text-align: center;">Plug-ins Available</h3>
+          <div class="feature-cards" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+        
+            <div class="plugin-card">
+              <div class="plugin-image-container">
+                <img src="operator_plugin.png" alt="Operator Productivity">
+              </div>
+              <h4>Operator Productivity</h4>
+              <p>Measure individual effort, identify slowdowns, and motivate your team with real-time scoring logic.</p>
             </div>
-            <h4>Operator Productivity</h4>
-            <p>Measure individual effort, identify slowdowns, and motivate your team with real-time scoring logic.</p>
-          </div>
-      
-          <div class="plugin-card">
-            <div class="plugin-image-container">
-              <img src="quick_sigma.png" alt="Quick Sigma">
+        
+            <div class="plugin-card">
+              <div class="plugin-image-container">
+                <img src="quick_sigma.png" alt="Quick Sigma">
+              </div>
+              <h4>Continuous Improvement – Quick Sigma</h4>
+              <p>Deploy Lean & DMAIC projects step-by-step using an interactive workspace. Measure impact through real KPIs and structured follow-up.</p>
             </div>
-            <h4>Continuous Improvement – Quick Sigma</h4>
-            <p>Deploy Lean & DMAIC projects step-by-step using an interactive workspace. Measure impact through real KPIs and structured follow-up.</p>
-          </div>
-      
-          <div class="plugin-card">
-            <div class="plugin-image-container">
-              <img src="workforce_plugin.png" alt="Workforce Optimizer">
+        
+            <div class="plugin-card">
+              <div class="plugin-image-container">
+                <img src="workforce_plugin.png" alt="Workforce Optimizer">
+              </div>
+              <h4>Workforce Optimizer</h4>
+              <p>Optimize workforce per machine to find the best balance between output and unit cost, based on real performance data.</p>
             </div>
-            <h4>Workforce Optimizer</h4>
-            <p>Optimize workforce per machine to find the best balance between output and unit cost, based on real performance data.</p>
-          </div>
 
-          <div class="plugin-card">
-            <div class="plugin-image-container">
-              <img src="custom_plugin.png" alt="Custom Requests">
+            <div class="plugin-card">
+              <div class="plugin-image-container">
+                <img src="custom_plugin.png" alt="Custom Requests">
+              </div>
+              <h4>Custom Features on Request</h4>
+              <p>If a needed feature is missing, the ParetOPS team can evaluate and develop it. The platform is modular and adapts to your needs.</p>
             </div>
-            <h4>Custom Features on Request</h4>
-            <p>If a needed feature is missing, the ParetOPS team can evaluate and develop it. The platform is modular and adapts to your needs.</p>
+            
+        
           </div>
+        </section>
+        
+        
+        
+        <section class="use-case" id="use-case">
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">Built for Performance-Driven Teams</h3>
           
-      
-        </div>
-      </section>
-      
-      
-      
-      
-      
-  <section class="use-case" id="use-case">
-    <h3>Built for Performance-Driven Teams</h3>
-    <p>
-      • Used by leading aerospace manufacturers to increase availbility, utilization and efficiency across their production lines.<br>
-      • Improved production caapcity by 25% avoiding costly investments in new machines.<br>
-      • Aligned daily actions with long-term performand goals through live dashboards and alerts.
-    </p>
-    <!-- <p style="margin-top: 2rem; font-style: italic; color: #ccc;">
-      “With ParetOPS, we finally turned our production data into actionable results. It’s simple, accurate, and powerful.”<br>
-    — ..., ...
-    </p> -->
-  </section>
+          <ul style="list-style: none; padding: 0; max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.8;">
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: #4da6ff;">&#9679;</span>
+              Trusted by top aerospace manufacturers to increase <strong>availability, utilization</strong>, and <strong>efficiency</strong> across their production lines.
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: #4da6ff;">&#9679;</span>
+              Improved production capacity by <strong>25%</strong>, avoiding costly investments in new machines.
+            </li>
+            <li style="position: relative; padding-left: 1.5rem;">
+              <span style="position: absolute; left: 0; color: #4da6ff;">&#9679;</span>
+              Aligned daily execution with long-term performance goals through <strong>live dashboards</strong> and <strong>instant alerts</strong>.
+            </li>
+                <!-- <p style="margin-top: 2rem; font-style: italic; color: #ccc;">
+              “With ParetOPS, we finally turned our production data into actionable results. It’s simple, accurate, and powerful.”<br>
+            — ..., ...
+            </p> -->
+          </ul>
+        </section>
+        
 
-  <section class="features" id="contact" style="background-color: #0a1b33;">
-    <h3 style="margin-bottom: 2rem;">Contact Us</h3>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
-      <div class="card" style="width: 300px; background-color: rgba(255, 255, 255, 0.07); text-align: center;">
-        <h4 style="color: #4da6ff;">General Inquiries</h4>
-        <p><a href="mailto:contact@paretops.com" style="color: #cfd9e0; text-decoration: underline;">contact@paretops.com</a></p>
+    <section class="features" id="contact" style="background-color: #0a1b33;">
+      <h3 style="margin-bottom: 2rem;">Contact Us</h3>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+        <div class="card" style="width: 300px; background-color: rgba(255, 255, 255, 0.07); text-align: center;">
+          <h4 style="color: #4da6ff;">General Inquiries</h4>
+          <p><a href="mailto:contact@paretops.com" style="color: #cfd9e0; text-decoration: underline;">contact@paretops.com</a></p>
+        </div>
+        <div class="card" style="width: 300px; background-color: rgba(255, 255, 255, 0.07); text-align: center;">
+          <h4 style="color: #4da6ff;">Support</h4>
+          <p><a href="mailto:support@paretops.com" style="color: #cfd9e0; text-decoration: underline;">support@paretops.com</a></p>
+        </div>
       </div>
-      <div class="card" style="width: 300px; background-color: rgba(255, 255, 255, 0.07); text-align: center;">
-        <h4 style="color: #4da6ff;">Support</h4>
-        <p><a href="mailto:support@paretops.com" style="color: #cfd9e0; text-decoration: underline;">support@paretops.com</a></p>
-      </div>
-    </div>
-  </section>
-  
+    </section>
+  </main>
+
   <footer>
     © 2025 ParetOPS – All rights reserved | Privacy | Terms | paretops.com
   </footer>
