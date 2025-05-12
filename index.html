@@ -16,15 +16,23 @@
       font-family: 'Inter', sans-serif;
       background: #07182f url('better_background.jpg') center/cover no-repeat;
       color: #fff;
+      padding-top: 0px;
     }
 
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6); /* un peu plus opaque pour lisibilité */
+      backdrop-filter: blur(4px); /* optionnel pour un effet flou élégant */
     }
+
 
     .logo-container {
       display: flex;
@@ -214,9 +222,9 @@
     </div>
     <nav>
       <a onclick="scrollToSection('hero')">Home</a>
-      <a onclick="scrollToSection('features')">Features</a>
+      <a onclick="scrollToSection('feature-highlights')">Features</a>
       <a onclick="scrollToSection('use-case')">Use Cases</a>
-      <a onclick="alert('Email us at: contact@paretops.com')">Contact</a>
+      <a onclick="scrollToSection('contact')">Contact</a>
       <a href="#" style="font-weight: 600; background: #334155; padding: 0.4rem 0.8rem; border-radius: 5px;">Client Portal</a>
     </nav>
   </header>
@@ -225,7 +233,7 @@
     <h2>Empowering Data-Driven Efficiency in Manufacturing</h2>
     <p>ParetOPS helps your team make smarter decisions, reduce downtime, and boost productivity — all in real time.</p>
     <div class="buttons">
-      <button class="demo-btn" onclick="alert('Demo video is coming soon!')">Features</button>
+      <button class="demo-btn" onclick="scrollToSection('feature-highlights')">Features</button>
       <button class="contact-btn" onclick="alert('Email us at: contact@paretops.com')">Contact Us</button>
     </div>
   </section>
@@ -251,7 +259,7 @@
     </div>
   </section>
 
-  <section class="features" style="background-color: #08172d;">
+  <section class="features" id="feature-highlights" style="background-color: #08172d;">
     <h3 style="margin-bottom: 2rem;">Feature Highlights</h3>
     <div style="max-width: 1100px; margin: auto; display: flex; flex-direction: column; gap: 3rem;">
   
@@ -385,7 +393,7 @@
     </p>
   </section>
 
-  <section class="features" style="background-color: #0a1b33;">
+  <section class="features" id="contact" style="background-color: #0a1b33;">
     <h3 style="margin-bottom: 2rem;">Contact Us</h3>
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
       <div class="card" style="width: 300px; background-color: rgba(255, 255, 255, 0.07); text-align: center;">
